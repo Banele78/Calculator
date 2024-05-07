@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: right; /* Align text content center */
+  margin-top: 60px;
+  background-color: #e7dede;
 }
 
-.App-link {
-  color: #61dafb;
+.Calculator {
+  background-color: black;
+  width: 230px;
+  padding: 20px; /* Add some padding for spacing */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.results{
+  background-color: white;
+  width: 230px;
+  height: 70px;
+  border-radius: 0px;
+  overflow: hidden;
 }
+
+.results p{
+  margin-top: -2px;
+  font-size: 20px;
+}
+
+
+.ButtonPanel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100px;
+  grid-gap: 7px;
+  margin-top: 40px;
+}
+
+.ButtonPanel button {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  width: 50px;
+  border-radius: 50px;
+  border: none;
+}
+.ButtonPanel button:hover{
+background-color:rgb(92, 92, 90);
+}
+
+.ButtonPanel .equals{
+  background-color:beige;
+  grid-column: 3/ span 2; /* Span 2 columns starting from the third column */
+  width: 100px;
+  border-radius: 60px;
+}
+
+.opt{
+  background-color: #f79505;
+}
+
+.row{
+  grid-column: 4;
+  background-color: red;
+}
+
+
+
